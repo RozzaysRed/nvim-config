@@ -1,0 +1,6 @@
+{
+  "coc.preferences.formatOnSaveFiletypes": ["css", "markdown", "typescript", "javascript", "typescriptreact"],
+  "diagnostic.checkCurrentLine": true,
+  "diagnostic.enableMessage": "never",
+  "diagnostic.virtualText": true
+}
