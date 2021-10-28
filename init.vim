@@ -16,8 +16,8 @@ Plug 'ctrlpvim/ctrlp.vim' " fuzzy find files
 Plug 'scrooloose/nerdcommenter'
 Plug 'jparise/vim-graphql'
 Plug 'prettier/vim-prettier', {
-  \ 'do': 'npm install',
-  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
+  \ 'do': 'pnpm install',
+  \ 'for': ['javascript', 'typescript', 'typescriptreact', 'javascriptreact', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
 
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'mhartington/oceanic-next'
@@ -161,7 +161,7 @@ lua << EOF
 
   -- Use a loop to conveniently call 'setup' on multiple servers and
   -- map buffer local keybindings when the language server attaches
-  local servers = { 'rust_analyzer', 'tsserver' }
+  local servers = { 'tailwindcss', 'tsserver' }
   for _, lsp in ipairs(servers) do
     nvim_lsp[lsp].setup {
       capabilities = capabilities,
