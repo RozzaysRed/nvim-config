@@ -15,9 +15,9 @@ nnoremap("<leader>fb", "<cmd>Telescope buffers<cr>")
 nnoremap("<leader>fh", "<cmd>Telescope help_tags<cr>")
 
 -- Nerd commenter remaps
-vim.map("vmap ++ <plug>NERDCommenterToggle")
-vim.map("nmap ++ <plug>NERDCommenterToggle")
+vim.cmd("vmap ++ <plug>NERDCommenterToggle")
+vim.cmd("nmap ++ <plug>NERDCommenterToggle")
 
 -- basic leader remappings
-vim.map("map <leader>n :bn<CR>")
-vim.map("map <leader>p :bp<CR>")
+vim.cmd("map <leader>n :bn<CR>")
+vim.cmd("map <leader>p :bp<CR>")
