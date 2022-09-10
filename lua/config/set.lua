@@ -3,6 +3,8 @@ vim.cmd("let mapleader = \"\\<Space>\"")
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
+vim.opt.termguicolors = true
+
 vim.opt.mouse = "a"
 vim.opt.smarttab = true
 vim.opt.cindent = true
