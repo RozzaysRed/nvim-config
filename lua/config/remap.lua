@@ -1,6 +1,7 @@
 local nnoremap = require("config.keymap").nnoremap
 local inoremap = require("config.keymap").inoremap
 local vnoremap = require("config.keymap").vnoremap
+local xnoremap = require("config.keymap").xnoremap
 
 inoremap("jk", "<ESC>")
 
@@ -14,6 +15,9 @@ nnoremap("<leader>fg", "<cmd>Telescope live_grep<cr>")
 nnoremap("<leader>fb", "<cmd>Telescope buffers<cr>")
 nnoremap("<leader>fh", "<cmd>Telescope help_tags<cr>")
 nnoremap("<leader>fr", "<cmd>Telescope resume<cr>")
+
+-- Preserve last capied string in paste register
+xnoremap("<leader>p", "\"_dP")
 
 -- Nerd commenter remaps
 vim.cmd("vmap ++ <plug>NERDCommenterToggle")
