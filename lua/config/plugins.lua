@@ -8,8 +8,12 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
     -- Color Schemes
-    use 'folke/tokyonight.nvim'
-    use { "catppuccin/nvim", as = "catppuccin" }
+    use 'arcticicestudio/nord-vim'
+    --use({ 'rose-pine/neovim', as = 'rose-pine' })
+    --use { "catppuccin/nvim", as = "catppuccin" }
+
+    -- Languages
+    use("ziglang/zig.vim")
 
     -- Treesitter
     use("nvim-treesitter/nvim-treesitter", {
@@ -19,11 +23,12 @@ return require('packer').startup(function(use)
     use("romgrk/nvim-treesitter-context")
 
     -- LSP Packages
-    use("neovim/nvim-lspconfig")
+    use(
+        "neovim/nvim-lspconfig"
+    )
     use("hrsh7th/cmp-nvim-lsp")
     use("hrsh7th/cmp-buffer")
     use("hrsh7th/nvim-cmp")
-    use("tzachar/cmp-tabnine", { run = "./install.sh" })
     use("onsails/lspkind-nvim")
     use("nvim-lua/lsp_extensions.nvim")
     use("glepnir/lspsaga.nvim")
@@ -36,22 +41,31 @@ return require('packer').startup(function(use)
     use("ThePrimeagen/harpoon")
     use("sbdchd/neoformat")
 
-    use("mbbill/undotree")
-    use 'ryanoasis/vim-devicons'
-    use 'airblade/vim-gitgutter'
-    use 'vim-airline/vim-airline'
-    use 'vim-airline/vim-airline-themes'
-    use 'ctrlpvim/ctrlp.vim' -- fuzzy find files
-    use 'scrooloose/nerdcommenter'
-    use 'jparise/vim-graphql'
     use {
-        'prettier/vim-prettier',
-        run = 'pnpm install',
-        ft = {'javascript', 'typescript', 'typescriptreact', 'javascriptreact', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'}
+        "williamboman/mason.nvim",
+        run = ":MasonUpdate" -- :MasonUpdate updates registry contents
+    }
+    use(
+        "williamboman/mason-lspconfig.nvim"
+    )
+    use("VonHeikemen/lsp-zero.nvim")
+    use {
+      "folke/trouble.nvim",
+      requires = "nvim-tree/nvim-web-devicons",
+      config = function()
+        require("trouble").setup {
+          -- your configuration comes here
+          -- or leave it empty to use the default settings
+          -- refer to the configuration section below
+        }
+      end
     }
 
 
-    use 'christoomey/vim-tmux-navigator'
+    use("mbbill/undotree")
+    use 'airblade/vim-gitgutter'
+    use 'vim-airline/vim-airline'
+    use 'vim-airline/vim-airline-themes'
 
     use 'HerringtonDarkholme/yats.vim' -- TS Syntax
     use 'nvim-lua/plenary.nvim'
