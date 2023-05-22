@@ -8,9 +8,11 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
     -- Color Schemes
-    use 'arcticicestudio/nord-vim'
+    --use 'arcticicestudio/nord-vim'
     --use({ 'rose-pine/neovim', as = 'rose-pine' })
     --use { "catppuccin/nvim", as = "catppuccin" }
+    use 'projekt0n/github-nvim-theme'
+    use 'nvim-lualine/lualine.nvim'
 
     -- Languages
     use("ziglang/zig.vim")
@@ -49,6 +51,8 @@ return require('packer').startup(function(use)
         "williamboman/mason-lspconfig.nvim"
     )
     use("VonHeikemen/lsp-zero.nvim")
+    use("nvim-tree/nvim-web-devicons")
+    use("nvim-tree/nvim-tree.lua")
     use {
       "folke/trouble.nvim",
       requires = "nvim-tree/nvim-web-devicons",
@@ -70,6 +74,8 @@ return require('packer').startup(function(use)
     use 'HerringtonDarkholme/yats.vim' -- TS Syntax
     use 'nvim-lua/plenary.nvim'
     use 'nvim-telescope/telescope.nvim'
+
+    use 'gpanders/editorconfig.nvim'
 
 
 end)

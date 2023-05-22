@@ -19,3 +19,6 @@ vim.opt.hidden = true
 vim.opt.updatetime = 300
 vim.opt.wrap = false
 vim.opt.signcolumn = "yes"
+
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
