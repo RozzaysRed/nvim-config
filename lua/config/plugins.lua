@@ -10,8 +10,9 @@ return require('packer').startup(function(use)
     -- Color Schemes
     --use 'arcticicestudio/nord-vim'
     --use({ 'rose-pine/neovim', as = 'rose-pine' })
-    --use { "catppuccin/nvim", as = "catppuccin" }
-    use 'projekt0n/github-nvim-theme'
+    use { "catppuccin/nvim", as = "catppuccin" }
+    --use 'projekt0n/github-nvim-theme'
+    use 'embark-theme/vim'
     use 'nvim-lualine/lualine.nvim'
 
     -- Languages
@@ -43,6 +44,7 @@ return require('packer').startup(function(use)
     use("ThePrimeagen/harpoon")
     use("sbdchd/neoformat")
 
+    -- Mason installer for LSP Linters, etc.
     use {
         "williamboman/mason.nvim",
         run = ":MasonUpdate" -- :MasonUpdate updates registry contents
@@ -51,8 +53,14 @@ return require('packer').startup(function(use)
         "williamboman/mason-lspconfig.nvim"
     )
     use("VonHeikemen/lsp-zero.nvim")
+
+    use("dense-analysis/ale")
+
+    -- nvim-tree plugins
     use("nvim-tree/nvim-web-devicons")
     use("nvim-tree/nvim-tree.lua")
+
+    -- Trouble for showing errors in quick fix list
     use {
       "folke/trouble.nvim",
       requires = "nvim-tree/nvim-web-devicons",
@@ -68,8 +76,6 @@ return require('packer').startup(function(use)
 
     use("mbbill/undotree")
     use 'airblade/vim-gitgutter'
-    use 'vim-airline/vim-airline'
-    use 'vim-airline/vim-airline-themes'
 
     use 'HerringtonDarkholme/yats.vim' -- TS Syntax
     use 'nvim-lua/plenary.nvim'

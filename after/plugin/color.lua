@@ -4,6 +4,7 @@
 --vim.cmd [[colorscheme catppuccin]]
 --vim.cmd('colorscheme rose-pine')
 --vim.cmd('colorscheme nord')
-vim.cmd('colorscheme github_dark')
+--vim.cmd('colorscheme github_dark')
+vim.cmd('colorscheme embark')
 
 require('lualine').setup({...})
